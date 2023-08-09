@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .square {
+      
+        
+      
+        transition: transform 3s ease-in-out;
+    }
+</style>
+</head>
+<body>
+    <div class="square">
+      <img src="assets/ILHA.png" width="800px">
+    </div>
+
+    <script>
+        // Função para gerar um número aleatório dentro de um intervalo menor
+        function getRandomNumber(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        // Função para atualizar a posição da div de forma aleatória dentro de um intervalo menor
+        function moveSquare() {
+            var square = document.querySelector('.square');
+            var bodyWidth = document.body.clientWidth;
+            var bodyHeight = document.body.clientHeight;
+
+            var sRange = 10; // Define o intervalo de movimento em pixels
+            var range = 50; // Define o intervalo de movimento em pixels
+
+            var leftPos = getRandomNumber(-sRange, sRange);
+            var topPos = getRandomNumber(-range, range);
+
+            square.style.transform = `translate(${leftPos}px, ${topPos}px)`;
+        }
+
+        // Chamando a função de movimento inicial
+        moveSquare();
+
+        // Definindo um intervalo para chamar a função de movimento repetidamente
+        setInterval(moveSquare, 3000); // 2000 milissegundos = 2 segundos
+    </script>
+</body>
+</html>
