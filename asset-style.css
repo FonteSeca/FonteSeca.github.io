@@ -17,6 +17,7 @@ header {
 
 .icon-assets {
     margin-top: -200px;
+    display: none;
 
     .pack-list {
         display: grid;
@@ -110,10 +111,11 @@ section {
 .creators {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
 
     margin-top: 50px;
 
     img {
-        height: 50px;
+        height: 40px;
     }
 }
