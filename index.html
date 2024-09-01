@@ -71,14 +71,20 @@
         <div>
           <h5>What I Do?</h5>
           <h6>3D</h6>
-          <p>Mascot Creation</p>
-          <p>Character Design</p>
-          <p>Prop Design</p>
-          <p>Enviroment Design</p>
-          <p>Animation</p>
+          <div class="list">
+
+            <p>Mascot Creation</p>
+            <p>Character Design</p>
+            <p>Prop Design</p>
+            <p>Enviroment Design</p>
+            <p>Animation</p>
+          </div>
           <h6>UI/UX</h6>
-          <p>Mobile Design</p>
-          <p>Web Design</p>
+          <div class="list">
+            <p>Mobile Design</p>
+            <p>Web Design</p>
+
+          </div>
         </div>
       </div>
     </div>
@@ -106,7 +112,24 @@
       }
       h1 {
         font-weight: 900;
-        font-size: 6rem;
+        font-size: 5rem;
+      }
+
+      h6 {
+        margin: 30px 0px;
+      }
+
+      .list {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+          border: 1px solid black;
+          padding: 10px;
+          border-radius: 5px;
+          margin: 0;
+        }
       }
 
       a {
@@ -148,6 +171,7 @@
         justify-content: center;
         align-items: center;
         padding: 25px;
+        box-sizing: border-box;
         
       }
 
@@ -262,7 +286,7 @@
         .info {
           width: 100%;
           height: 50%;
-          display: block;
+          
           
         }
 
